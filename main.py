@@ -4,15 +4,19 @@ pygame.init()
 
 screen = pygame.display.set_mode((800, 600))
 screen.fill((0,0,0))
+player = pygame.image.load("player.png")
+
+playerX = 370
+playery = 270
+
+
 pygame.display.set_caption("^_^")
 print("a")
 
 running = True
 
-
-
 while running:
-
+    screen.blit(player,(playerX,playery))
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
